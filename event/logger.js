@@ -17,7 +17,8 @@ function errorHandler(err){
 
 
 function logger(event){
-
   let date = new Date().toUTCString();
   console.log({event , date});
 }
+
+module.exports = { done , errorHandler , logger};

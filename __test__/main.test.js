@@ -18,14 +18,14 @@ describe('test' , () => {
   });
 
 
-  //   it('can write on the file' , () => {
-  //     let data = JSON.stringify({'test string': 'test string'});
-  //     let buffedData = Buffer.from(data);
-  //     return fileSystem.writer(file , buffedData)
-  //       .then(data => {
-  //         console.log( 'hhhhhhhhhhhh');
-  //       });
-  //   });
+  it('can write on the file' , () => {
+    let data = JSON.stringify({'test string': 'test string'});
+    let buffedData = Buffer.from(data);
+    return fileSystem.writer(file , buffedData)
+      .then(data => {
+        console.log( 'Works');
+      });
+  });
 
 
   it('can convert text to UpperCase' , () => {

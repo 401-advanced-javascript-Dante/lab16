@@ -11,7 +11,7 @@ describe('test' , () => {
   it('can read the file as a string' , () => {
     return fileSystem.reader(file)
       .then( (data) => { 
-        console.log(data);
+        // console.log(data);
         expect(typeof(data.toString().trim())).toEqual('string');
       });
 
@@ -23,7 +23,7 @@ describe('test' , () => {
     let buffedData = Buffer.from(data);
     return fileSystem.writer(file , buffedData)
       .then(data => {
-        console.log( 'Works');
+        // console.log( 'Works');
       });
   });
 
@@ -32,7 +32,7 @@ describe('test' , () => {
     fileSystem.capsLock(file);
     return fileSystem.reader(file)
       .then( (data) => { 
-        console.log(data);
+        // console.log(data);
         expect(typeof(data.toString().trim())).toEqual('string');
       });
 

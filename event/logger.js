@@ -8,17 +8,17 @@ events.on('success' , done);
 
 
 function done(process){
-  console.log(`${process} Done Successfully`);
+  return console.log(`${process} Done Successfully`);
 }
 
 function errorHandler(err){
-  console.log(err);
+  return console.log(err);
 }
 
 
 function logger(event){
   let date = new Date().toUTCString();
-  console.log({event , date});
+  return console.log({event , date});
 }
 
 module.exports = { done , errorHandler , logger};

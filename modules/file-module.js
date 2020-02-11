@@ -14,7 +14,7 @@ require('../event/logger.js');
 const reader = (file) => {
 
   try{
-    events.emit('log', 'Reading!');
+    // events.emit('log', 'Reading!');
 
     return read(file).then( (data) => {
       return data ;
@@ -28,7 +28,7 @@ const reader = (file) => {
 
 const writer = (file, data) => {
   try{
-    events.emit('log', 'Writing!');
+    // events.emit('log', 'Writing!');
     return write(file , data);
   }catch(e){
     return events.emit('error' , e);
@@ -39,21 +39,21 @@ const writer = (file, data) => {
 
 const capsLock = (file) => {
 
-  events.emit('log', 'ToUpperCase!');
+  // events.emit('log', 'ToUpperCase!');
 
   fs.readFile( file, (err, data) => {
     if(err) { throw err; }
 
-    events.emit('success' , 'Read');
+    // events.emit('success' , 'Read');
 
     let text = data.toString().toUpperCase();
     // console.log('text', text);
 
-    events.emit('success' , 'ToUpperCase function');
+    // events.emit('success' , 'ToUpperCase function');
 
     fs.writeFile( file, Buffer.from(text), (err, data) => {
       if(err) { throw err; }
-      events.emit('success' , 'Saved!');
+      // events.emit('success' , 'Saved!');
     });
   });
 };

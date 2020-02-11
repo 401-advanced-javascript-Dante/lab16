@@ -1,6 +1,7 @@
 'use strict' ;
 
 const net = require('net');
+// eslint-disable-next-line no-unused-vars
 const PORT = process.env.PORT || 3001 ;
 const server = net.createServer();
 

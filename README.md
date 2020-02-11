@@ -5,7 +5,7 @@
 ### Author: Abdulrhman Alharasis
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-Dante/lab16/pull/1)
+- [submission PR](https://github.com/401-advanced-javascript-Dante/lab16/pull/2)
 - [ci/cd](https://github.com/401-advanced-javascript-Dante/lab16/actions/runs/36994363) (GitHub Actions)
 
 ### Setup
@@ -25,6 +25,6 @@
 
 #### UML
 
-![uml](https://i.ibb.co/J3FfrzS/lab16.jpg)
+![uml](https://i.ibb.co/n6CJZs6/events.jpg)
 
 

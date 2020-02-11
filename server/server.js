@@ -7,7 +7,8 @@ const server = net.createServer();
 let usersSpace = {} ;
 console.log('space' , usersSpace);
 server.on('connection' , (user) => {
-  const id = `User #${Math.random()} `;
+  const id = `User ID: ${Math.random()} `;
+  console.log('New User==> YAY!! ', id);
   usersSpace[id] = user ;
   user.on('data' , (buffer)=> broadcast(buffer));
   user.on('end' , () => delete usersSpace[id]);
@@ -19,17 +20,18 @@ server.on('connection' , (user) => {
 function broadcast(data){
   // console.log('broadcast', data);
   let message = JSON.stringify(data.toString().trim());
-  // console.log('broadcast after', data);
+  // console.log('broadcast after', message);
     
   for(let user in usersSpace){
     usersSpace[user].write(message);
   }
-  console.log('file-saved');
-
+  console.log('Status!',message);
 }
-
 
 
 server.listen(PORT , ()=> {
   console.log(`Let's Rock !! ${PORT}`);
 });
+
+
+module.exports = broadcast ;

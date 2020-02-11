@@ -38,13 +38,19 @@ const writer = (file, data) => {
 
 
 const capsLock = (file) => {
+
   events.emit('log', 'ToUpperCase!');
+
   fs.readFile( file, (err, data) => {
     if(err) { throw err; }
+
     events.emit('success' , 'Read');
 
     let text = data.toString().toUpperCase();
+    // console.log('text', text);
+
     events.emit('success' , 'ToUpperCase function');
+
     fs.writeFile( file, Buffer.from(text), (err, data) => {
       if(err) { throw err; }
       events.emit('success' , 'Saved!');

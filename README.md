@@ -1,6 +1,6 @@
-# LAB - Class 16
+# LAB - Class 17
 
-## Event Driven Applications
+## LAB: TCP Server / Message Application
 
 ### Author: Abdulrhman Alharasis
 ### Links and Resources
